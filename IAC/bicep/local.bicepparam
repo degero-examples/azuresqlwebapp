@@ -1,0 +1,6 @@
+using './main.bicep'
+param env = 'dev'
+param sqlServerName = ''
+param databaseName = ''
+param sqlServerUser = ''
+param sqlServerPass = ''
