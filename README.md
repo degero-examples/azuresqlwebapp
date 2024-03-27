@@ -1,4 +1,6 @@
-﻿# Test Azure EF core .net 8 MVC webapp
+﻿# Example Azure .Net 8 ASP.Net Core EFCore Azure SQL VNet
+
+Example of Azure Webapp using Azure SQL with VNet Integration via PrivateLink
 
 ## Introduction
 
@@ -10,7 +12,6 @@ Designed to test infrastructure with azure sql and private connectivity on vnets
 See Bicep in (/IAC/bicep) to setup. 
 
 Update local.biceppparam with your sql server settings (servername=resourcename)
-
 
 Either use vscode bicep plugin to deploy main.bicep
 
