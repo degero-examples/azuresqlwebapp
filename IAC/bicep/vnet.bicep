@@ -33,7 +33,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2023-06-01' = {
     }
     subnets: [
       {
-        name: 'default'
+        name: 'webapp'
         properties: {
           addressPrefix: '10.0.0.0/24'
           delegations: [
@@ -52,7 +52,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2023-06-01' = {
         type: 'Microsoft.Network/virtualNetworks/subnets'
       }
       {
-        name: 'default2'
+        name: 'services'
         properties: {
           addressPrefix: '10.0.1.0/24'
           serviceEndpoints: []
@@ -71,7 +71,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2023-06-01' = {
 
 resource virtualNetworks_testvnetchad_name_default 'Microsoft.Network/virtualNetworks/subnets@2023-06-01' = {
   parent: vnet
-  name: 'default'
+  name: 'webapp'
   properties: {
     addressPrefix: '10.0.0.0/24'
     delegations: [
@@ -91,7 +91,7 @@ resource virtualNetworks_testvnetchad_name_default 'Microsoft.Network/virtualNet
 
 resource virtualNetworks_testvnetchad_name_default2 'Microsoft.Network/virtualNetworks/subnets@2023-06-01' = {
   parent: vnet
-  name: 'default2'
+  name: 'services'
   properties: {
     addressPrefix: '10.0.1.0/24'
     serviceEndpoints: []
