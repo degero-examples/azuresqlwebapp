@@ -79,3 +79,5 @@ module privateLink './privatelink.bicep' = {
     vnetName: vnet.outputs.name
   }
 }
+
+output funcAppSettings object = appServiceConfig.outputs.funcAppSettings

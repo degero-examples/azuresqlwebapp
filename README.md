@@ -3,6 +3,8 @@
 Example of Azure Webapp using Azure SQL with VNet Integration via PrivateLink.
 This is a simplified version not for production use.
 
+![Diagram](https://blog.paynter.tech/wp-content/uploads/2024/04/WebApp-AGWAFv1-Azure-SQL-PrivateLink.drawio-1.png)
+
 
 ## Introduction
 

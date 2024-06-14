@@ -29,7 +29,7 @@ resource webSiteConnectionStrings 'Microsoft.Web/sites/config@2023-01-01' = {
   name: 'connectionstrings'
   properties: {
     DefaultConnection: {
-      value: 'Server=tcp:${sqlServerName}.privatelink${az.environment().suffixes.sqlServerHostname},1433;Initial Catalog=${databaseName};User Id=${sqlAdminUser};Password=${sqlAdminPass};TrustServerCertificate=True;Connection Timeout=30;'
+      value: 'Server=tcp:${sqlServerName}${az.environment().suffixes.sqlServerHostname},1433;Initial Catalog=${databaseName};User Id=${sqlAdminUser};Password=${sqlAdminPass};TrustServerCertificate=True;Connection Timeout=30;'
       type: 'SQLAzure'
     }
   }
@@ -45,3 +45,5 @@ resource functionAppSettings 'Microsoft.Web/sites/config@2021-03-01' = {
   name: 'appsettings'
   properties: settings
 }
+
+output funcAppSettings object = settings
